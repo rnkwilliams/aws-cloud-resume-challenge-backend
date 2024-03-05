@@ -33,7 +33,7 @@ resource "aws_iam_policy" "iam_policy_for_resume_challenge_policy" {
   name        = "aws_iam_policy_for_terraform_resume_challenge_policy"
   path        = "/"
   description = "AWS IAM Policy for managing the resume challenge role"
-    policy = jsonencode(
+  policy = jsonencode(
     {
       "Version" : "2012-10-17",
       "Statement" : [
@@ -50,7 +50,7 @@ resource "aws_iam_policy" "iam_policy_for_resume_challenge_policy" {
           "Effect" : "Allow",
           "Action" : [
             "dynamodb:UpdateItem",
-      "dynamodb:GetItem",
+            "dynamodb:GetItem",
             "dynamodb:PutItem"
           ],
           "Resource" : "arn:aws:dynamodb:*:*:table/cloudresume_views_ddb"
@@ -60,7 +60,7 @@ resource "aws_iam_policy" "iam_policy_for_resume_challenge_policy" {
 }
 
 resource "aws_iam_role_policy_attachment" "attach_iam_policy_to_iam_role" {
-  role = aws_iam_role.iam_for_lambda.name
+  role       = aws_iam_role.iam_for_lambda.name
   policy_arn = aws_iam_policy.iam_policy_for_resume_challenge_policy.arn
 }
 
@@ -91,7 +91,7 @@ resource "aws_dynamodb_table" "cloudresume_views_ddb" {
   read_capacity  = 1
   write_capacity = 1
   lifecycle { ignore_changes = [read_capacity, write_capacity] }
-  hash_key       = "id"
+  hash_key = "id"
 
   attribute {
     name = "id"
