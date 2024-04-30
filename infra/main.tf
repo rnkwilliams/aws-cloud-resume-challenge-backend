@@ -76,7 +76,7 @@ resource "aws_lambda_function_url" "url1" {
 
   cors {
     allow_credentials = true
-    allow_origins     = ["https://ranikaresume.com"]
+    allow_origins     = ["https://ranikaresume.com", "https://www.ranikaresume.com"]
     allow_methods     = ["POST"]
     allow_headers     = ["date", "keep-alive"]
     expose_headers    = ["keep-alive", "date"]
