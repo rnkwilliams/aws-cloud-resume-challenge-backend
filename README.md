@@ -10,7 +10,7 @@ The frontend portion of this project can be found in this [repository](https://
 This diagram explains the structure of the full-stack project:
 ![Alt text](CloudResumeDiagram.png)
 
-## BackEnd
+## Backend
 
 The application's backend utilizes AWS Lambda for serverless computing and DynamoDB for NoSQL database storage. Python(boto3) library is used for Lambda function development, enabling seamless interaction with DynamoDB. Whenever a user accesses the web application, a JavaScript function initiates an API call to the Lambda function. This call triggers the Lambda function, which retrieves an item from the DynamoDB table, increments the visit count attribute by one, and sends back the updated value in the response. The refreshed visit count is then displayed at the bottom of the web page.
 Repository: [Backend GitHub Repository](https://github.com/rnkwilliams/aws-cloud-resume-challenge-backend)
