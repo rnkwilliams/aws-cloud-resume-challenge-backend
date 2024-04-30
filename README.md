@@ -2,7 +2,7 @@
 
 # Cloud Resume Challenge Project Backend
 
-This project is a serverless full-stack web application built based on the [Cloud Resume Challenge](https://cloudresumechallenge.dev/). It consists of a front and back end hosted on AWS services, with infrastructure managed using Terraform. The CI/CD pipeline is implemented using GitHub Actions, and testing is conducted using Cypress. 
+This project is a serverless full-stack web application built based on the [Cloud Resume Challenge](https://cloudresumechallenge.dev/). It consists of a front and backend hosted on AWS services, with infrastructure managed using Terraform. The CI/CD pipeline is implemented using GitHub Actions, and testing is conducted using Cypress. 
 
 The frontend portion of this project can be found in this [repository](https://github.com/rnkwilliams/aws-cloud-resume-challenge-frontend). The deployed web app can be found [here](https://www.ranikaresume.com/).
 
@@ -10,14 +10,14 @@ The frontend portion of this project can be found in this [repository](https://
 This diagram explains the structure of the full-stack project:
 ![Alt text](CloudResumeDiagram.png)
 
-## Back End
+## BackEnd
 
-The application's back end utilizes AWS Lambda for serverless computing and DynamoDB for NoSQL database storage. Python(boto3) library is used for Lambda function development, enabling seamless interaction with DynamoDB. Whenever a user accesses the web application, a JavaScript function initiates an API call to the Lambda function. This call triggers the Lambda function, which retrieves an item from the DynamoDB table, increments the visit count attribute by one, and sends back the updated value in the response. The refreshed visit count is then displayed at the bottom of the web page.
+The application's backend utilizes AWS Lambda for serverless computing and DynamoDB for NoSQL database storage. Python(boto3) library is used for Lambda function development, enabling seamless interaction with DynamoDB. Whenever a user accesses the web application, a JavaScript function initiates an API call to the Lambda function. This call triggers the Lambda function, which retrieves an item from the DynamoDB table, increments the visit count attribute by one, and sends back the updated value in the response. The refreshed visit count is then displayed at the bottom of the web page.
 Repository: [Backend GitHub Repository](https://github.com/rnkwilliams/aws-cloud-resume-challenge-backend)
 
 ## Infrastructure as Code (IaC)
 
-The back end is built with Terraform, which manages infrastructure as code. This provides a declarative approach to provisioning and managing AWS resources such as Lambda functions and DynamoDB used in the project. This ensures consistent and reproducible deployments across environments.
+The backend is built with Terraform, which manages infrastructure as code. This provides a declarative approach to provisioning and managing AWS resources such as Lambda functions and DynamoDB used in the project, ensuring consistent and reproducible deployments across environments.
 
 ## Continuous Integration/Continuous Deployment (CI/CD)
 
