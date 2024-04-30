@@ -6,6 +6,6 @@ module.exports = defineConfig({
       // implement node event listeners here
     },
     baseUrl:
-      "https://dwr7wvsxisifgqhvyq5qvcgmdu0svufq.lambda-url.us-east-1.on.aws/",
+      "https://yl6ejqfirwkzfnk7tdwhisc2fa0dmndm.lambda-url.us-east-1.on.aws/",
   },
 });
